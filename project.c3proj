@@ -1,0 +1,674 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 26000,
+	"name": "Climate Seeker",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		}
+	],
+	"uniqueId": "aoa27n45zqo",
+	"objectTypes": {
+		"items": [
+			"Sprite",
+			"Player",
+			"WallLeft",
+			"Keyboard",
+			"Ground3",
+			"Ground4",
+			"Ground5",
+			"Ground6",
+			"Sprite2",
+			"TiledBackground2",
+			"Sprite3",
+			"Sprite4",
+			"Sprite5",
+			"Touch",
+			"Sprite8",
+			"Sprite6",
+			"Sprite7",
+			"Sprite9",
+			"Sprite12",
+			"box",
+			"clue",
+			"TiledBackground3",
+			"Sprite13",
+			"Sprite14",
+			"Sprite15",
+			"Sprite16",
+			"Sprite17",
+			"Sprite18",
+			"Sprite19",
+			"Sprite20",
+			"Sprite21",
+			"Sprite22",
+			"Sprite23",
+			"Sprite24",
+			"B_Next_Clue",
+			"clue_popup",
+			"Mouse",
+			"Sprite25",
+			"Sprite26",
+			"BossText",
+			"B_NextBossText",
+			"B_BackBossText",
+			"Sprite27",
+			"Quiz1_Correct",
+			"Quiz1_False3",
+			"Quiz1_False2",
+			"Quiz1_False1",
+			"Sprite32",
+			"Sprite28",
+			"completePopup",
+			"txtScore_complete",
+			"next_complete",
+			"back_complete",
+			"gameOver_popuo",
+			"Restart_GameOver",
+			"Text",
+			"score_GameOver",
+			"Tile3",
+			"cave_complete",
+			"door_trigger",
+			"Sprite30",
+			"Array",
+			"TiledBackground4",
+			"TiledBackground5",
+			"Sprite31",
+			"Clue2",
+			"Sprite35",
+			"Clue3",
+			"TiledBackground6",
+			"TiledBackground",
+			"Sprite37",
+			"next_clue2",
+			"Clue4",
+			"Clue5",
+			"objectivePopup",
+			"button_objective",
+			"Sprite33",
+			"Sprite34",
+			"next_arrow",
+			"Sprite38",
+			"Sprite39",
+			"Sprite40",
+			"Sprite41",
+			"Sprite42",
+			"Sprite43",
+			"Sprite44",
+			"Array2",
+			"TiledBackground7",
+			"Sprite45",
+			"TiledBackground8",
+			"TiledBackground9",
+			"Sprite46",
+			"Sprite47",
+			"Sprite48",
+			"TiledBackground10",
+			"TiledBackground11",
+			"TiledBackground12",
+			"Sprite50",
+			"clueLVL2_1",
+			"clueLVL2_2",
+			"clueLVL2_3",
+			"clueLVL2_4",
+			"clueLVL2_5",
+			"Sprite55",
+			"clue_popup_2",
+			"Sprite11",
+			"Sprite52",
+			"Sprite53",
+			"Sprite54",
+			"Sprite56",
+			"NZ_button",
+			"france_button",
+			"spain_button",
+			"norway_button",
+			"Sprite57",
+			"no1_pin",
+			"no2_pin",
+			"no6_pin",
+			"no3_pin",
+			"Sprite61",
+			"no4_pin",
+			"Sprite10",
+			"correct_popup",
+			"Sprite58",
+			"Sprite59",
+			"Sprite60",
+			"previous_arrow",
+			"Sprite63",
+			"Sprite64",
+			"Sprite65",
+			"Sprite66",
+			"Sprite36",
+			"Sprite62",
+			"Sprite67",
+			"Sprite68",
+			"Sprite69",
+			"Sprite70",
+			"Sprite71",
+			"basequiz",
+			"w_AJAX",
+			"w_Browser",
+			"soal",
+			"Status",
+			"w_score",
+			"scorest3",
+			"scorel2",
+			"scorel3l",
+			"scorel4",
+			"Group6",
+			"Group7",
+			"popuptext",
+			"popupgbr",
+			"True5",
+			"False5",
+			"w_Sprite29",
+			"Group3",
+			"Heart",
+			"popupkesalahan",
+			"Group9",
+			"w_Sprite35",
+			"w_Rectangle",
+			"w_Rectangle2",
+			"cr2",
+			"wr2",
+			"hati",
+			"Group8",
+			"w_Group12",
+			"w_Group11",
+			"w_Rectangle6",
+			"Rectangle7",
+			"CR3",
+			"WR3",
+			"w_Sprite34",
+			"LOPE",
+			"w_Group15",
+			"w_Group14",
+			"w_Rectangle11",
+			"w_Rectangle12",
+			"w_Sprite77",
+			"Sprite78",
+			"Sprite82",
+			"Rectangle8",
+			"Rectangle9",
+			"Group16",
+			"biotaOk_pelican2",
+			"Group17",
+			"Group18",
+			"Group20",
+			"Group21",
+			"w_Sprite40",
+			"corazon",
+			"w_Sprite46",
+			"w_Sprite68",
+			"w_Sprite69",
+			"w_Sprite55",
+			"w_Sprite53",
+			"w_Sprite54",
+			"w_Sprite56",
+			"w_Sprite57",
+			"lov",
+			"w_Rectangle13",
+			"Sprite79",
+			"Sprite83",
+			"w_Sprite52",
+			"w_Sprite59",
+			"w_Sprite60",
+			"w_Sprite61",
+			"w_Sprite62",
+			"w_Sprite70",
+			"w_Sprite71",
+			"Sprite80",
+			"Sprite81",
+			"Sprite85",
+			"Sprite86",
+			"Sprite87",
+			"Sprite88",
+			"Sprite89",
+			"Sprite90",
+			"love",
+			"Sprite111",
+			"Sprite112",
+			"Sprite96",
+			"Sprite97",
+			"Sprite91",
+			"Sprite94",
+			"Sprite92",
+			"Sprite98",
+			"Sprite99",
+			"w_Sprite101",
+			"w_Sprite102",
+			"w_Sprite103",
+			"w_Sprite104",
+			"w_Sprite105",
+			"w_Sprite106",
+			"w_Sprite107",
+			"Sprite108",
+			"lovee",
+			"Sprite114",
+			"Sprite115",
+			"Sprite109",
+			"Sprite110",
+			"Sprite113",
+			"GamePlaycoastal_seamless",
+			"GamePlaycontinental_seamless",
+			"map",
+			"mapBenuaAmerica",
+			"Sprite84",
+			"w_Sprite100",
+			"Dry",
+			"w_backgroundGameplay",
+			"w_backgroundGameplay2",
+			"w_Sprite63",
+			"w_Sprite67",
+			"quizarray"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Sprite29",
+					"resume_pause"
+				],
+				"subfolders": [],
+				"name": "Paused"
+			},
+			{
+				"items": [
+					"clueScore",
+					"clueScoreDummy",
+					"pause_button",
+					"txtScore",
+					"clueUI",
+					"Sprite49",
+					"Sprite51",
+					"PlayerHealth"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Clue Popup"
+			},
+			{
+				"items": [
+					"basequiz2",
+					"quizarray2",
+					"score2",
+					"soal2",
+					"w_Sprite30",
+					"status2"
+				],
+				"subfolders": [],
+				"name": "Quiz2"
+			},
+			{
+				"items": [
+					"Text3",
+					"Score3",
+					"Status3",
+					"BASEQUIZ3",
+					"QUIZARRAY3"
+				],
+				"subfolders": [],
+				"name": "Quiz3"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Family1",
+			"Family2",
+			"pins",
+			"btnfamily",
+			"btnfam2",
+			"BTNFAM3"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Main Menu",
+			"Level Selection",
+			"Level Selection2",
+			"Level 1",
+			"Level 2",
+			"Climatrip World",
+			"Level Selection3",
+			"Quizlv1",
+			"Quizlv2",
+			"Quizlv3",
+			"stage3",
+			"stage3l2",
+			"stage3l3",
+			"stage3l4"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Lvl 1 Sheet",
+			"Lvl Select Sheet",
+			"Menu Sheet",
+			"Lvl 2 Sheet",
+			"Climatrip Sheet",
+			"stage3l4",
+			"stage3l3",
+			"stage3l2",
+			"stage3",
+			"Quizlv3sheet",
+			"Quizlv2sheet",
+			"Quizlv1sheet"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "Quantico-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 832555551595077
+				},
+				{
+					"name": "BalooPaaji-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 916848551765966
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 821917663496654,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 510911055993735,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 600395346847919,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 465489251100879,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 773209072652973,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 331914164748864,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 575691641291236,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "New Array.json",
+					"type": "application/json",
+					"sid": 883768225737078
+				},
+				{
+					"name": "soalquiz0.json",
+					"type": "application/json",
+					"sid": 572557704777930
+				},
+				{
+					"name": "soalquiz1.json",
+					"type": "application/json",
+					"sid": 338147917083500
+				},
+				{
+					"name": "SOALQUIZ3.json",
+					"type": "application/json",
+					"sid": 465498267614896
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app"
+	},
+	"viewportWidth": 1024,
+	"viewportHeight": 576,
+	"firstLayout": null
+}

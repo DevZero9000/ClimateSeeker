@@ -1,0 +1,12 @@
+{
+	"name": "btnfam2",
+	"plugin-id": "Sprite",
+	"sid": 145312526169974,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"wr2",
+		"cr2"
+	]
+}

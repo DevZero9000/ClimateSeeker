@@ -1,0 +1,65 @@
+{
+    "c2array": true,
+    "size": [
+        5,
+        3,
+        1
+    ],
+    "data": [
+        [
+            [
+                0
+            ],
+            [
+                "These climates are found along ocean coastlines"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                1
+            ],
+            [
+                "These climates typically have not year-round precipitation"
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                2
+            ],
+            [
+                "These climates have a large range in temperature between summer and winter"
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                3
+            ],
+            [
+                "Snowfall is not common on the coastal climate"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                4
+            ],
+            [
+                "These climates not riskable to increases in the intensity of storm surge"
+            ],
+            [
+                "False"
+            ]
+        ]
+    ]
+}

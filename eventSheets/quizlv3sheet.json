@@ -1,0 +1,700 @@
+{
+	"name": "Quizlv3sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "STAGEKUIZ3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 501993405062167
+		},
+		{
+			"eventType": "variable",
+			"name": "INDEX3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 135837359564574
+		},
+		{
+			"eventType": "variable",
+			"name": "SCOREINCRE3",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 993528931789223
+		},
+		{
+			"eventType": "variable",
+			"name": "NILAIKUIZ3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 265674121167438
+		},
+		{
+			"eventType": "variable",
+			"name": "SCORE3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 703796544910488
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 938345598735558
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 121209736471844,
+							"parameters": {
+								"variable": "INDEX3",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 550544337610590,
+							"parameters": {
+								"variable": "SCORE3",
+								"value": "0"
+							}
+						},
+						{
+							"callFunction": "UPDATEVISUALSCORE3",
+							"sid": 486948845545173
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "w_Sprite34",
+							"sid": 924853686679167,
+							"parameters": {
+								"animation": "\"STAGE\"&STAGEKUIZ3",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "w_Sprite34",
+							"sid": 397252724666465
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "w_AJAX",
+							"sid": 450347783415086,
+							"parameters": {
+								"tag": "\"SOALQUIZ3\"",
+								"file": "SOALQUIZ3.json"
+							}
+						}
+					],
+					"sid": 373707394438025
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "w_AJAX",
+							"sid": 536148150400209,
+							"parameters": {
+								"tag": "\"SOALQUIZ3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear",
+							"objectClass": "BASEQUIZ3",
+							"sid": 675552364979667,
+							"parameters": {
+								"value": "0"
+							}
+						},
+						{
+							"id": "load",
+							"objectClass": "BASEQUIZ3",
+							"sid": 830819412404218,
+							"parameters": {
+								"json": "w_AJAX.LastData"
+							}
+						},
+						{
+							"id": "load",
+							"objectClass": "QUIZARRAY3",
+							"sid": 809288748844427,
+							"disabled": true,
+							"parameters": {
+								"json": "w_AJAX.LastData"
+							}
+						},
+						{
+							"callFunction": "RANDOMQUIZ3",
+							"sid": 828977466338703
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 916086549724258
+						},
+						{
+							"id": "load",
+							"objectClass": "BASEQUIZ3",
+							"sid": 293963671118479,
+							"parameters": {
+								"json": "w_AJAX.LastData"
+							}
+						},
+						{
+							"callFunction": "LOADQUIZ3",
+							"sid": 230173821916328
+						}
+					],
+					"sid": 308298938191722
+				},
+				{
+					"functionName": "RANDOMQUIZ3",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 262080640958118,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "RANDOMINDEX3",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 424206359973171
+						},
+						{
+							"eventType": "variable",
+							"name": "WIDTHOFARRAY3",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 460808457775625
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 978311511700743,
+									"parameters": {
+										"variable": "WIDTHOFARRAY3",
+										"value": "BASEQUIZ3.Width"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "QUIZARRAY3",
+									"sid": 184092478020559,
+									"parameters": {
+										"width": "0",
+										"height": "BASEQUIZ3.Height",
+										"depth": "1"
+									}
+								}
+							],
+							"sid": 786309931632723
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 562912346868205,
+									"parameters": {
+										"name": "\"RANDOMARRAY3\"",
+										"start-index": "0",
+										"end-index": "WIDTHOFARRAY3-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 729685275488457,
+									"parameters": {
+										"variable": "RANDOMINDEX3",
+										"value": "floor(random(0,BASEQUIZ3.Width))"
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "QUIZARRAY3",
+									"sid": 349723992101380,
+									"parameters": {
+										"where": "back",
+										"value": "0",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "QUIZARRAY3",
+									"sid": 663350662916674,
+									"parameters": {
+										"x": "QUIZARRAY3.Width-1",
+										"y": "0",
+										"value": "BASEQUIZ3.At(RANDOMINDEX3,0)"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "QUIZARRAY3",
+									"sid": 483972685474930,
+									"parameters": {
+										"x": "QUIZARRAY3.Width-1",
+										"y": "1",
+										"value": "BASEQUIZ3.At(RANDOMINDEX3,1)"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "QUIZARRAY3",
+									"sid": 967352529179461,
+									"parameters": {
+										"x": "QUIZARRAY3.Width-1",
+										"y": "2",
+										"value": "BASEQUIZ3.At(RANDOMINDEX3,2)"
+									}
+								},
+								{
+									"id": "delete",
+									"objectClass": "QUIZARRAY3",
+									"sid": 751656778959872,
+									"parameters": {
+										"index": "RANDOMINDEX3",
+										"axis": "x"
+									}
+								}
+							],
+							"sid": 289082482649269
+						}
+					]
+				},
+				{
+					"functionName": "LOADQUIZ3",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "stop-animation",
+							"objectClass": "w_Sprite34",
+							"sid": 684123393133083
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "w_Sprite34",
+							"sid": 150517738645557,
+							"parameters": {
+								"frame-number": "QUIZARRAY3.At(INDEX3,0)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text3",
+							"sid": 615308885852361,
+							"parameters": {
+								"text": "QUIZARRAY3.At(INDEX3,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Status3",
+							"sid": 599948565454062,
+							"parameters": {
+								"text": "INDEX3+1 &\"/\"&QUIZARRAY3.Width"
+							}
+						}
+					],
+					"sid": 587626049687168
+				}
+			],
+			"sid": 542053425664680
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CheckAnswer & NextQuestions3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 399823172877453,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 888513264904067,
+									"parameters": {
+										"first-value": "QUIZARRAY3.At(INDEX3,2)",
+										"comparison": 0,
+										"second-value": "\"True\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onCorrectAnswerQuiz3",
+									"sid": 519680942451955
+								}
+							],
+							"sid": 196083053420696
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 859461286252351,
+									"parameters": {
+										"first-value": "QUIZARRAY3.At(INDEX3,2)",
+										"comparison": 0,
+										"second-value": "\"False\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onWrongAnswerQuiz3",
+									"sid": 133455538506929
+								}
+							],
+							"sid": 310079703822810
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 557673266437215,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 967665150897653,
+									"parameters": {
+										"first-value": "QUIZARRAY3.At(INDEX3,2)",
+										"comparison": 0,
+										"second-value": "\"True\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onWrongAnswerQuiz3",
+									"sid": 718040255839771
+								}
+							],
+							"sid": 335291757657368
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 682606593103325,
+									"parameters": {
+										"first-value": "QUIZARRAY3.At(INDEX3,2)",
+										"comparison": 0,
+										"second-value": "\"False\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onCorrectAnswerQuiz3",
+									"sid": 352474852045269
+								}
+							],
+							"sid": 353837472338849
+						}
+					]
+				}
+			],
+			"sid": 879475558488653
+		},
+		{
+			"functionName": "onCorrectAnswerQuiz3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 121087719538988,
+					"parameters": {
+						"variable": "SCORE3",
+						"value": "200"
+					}
+				},
+				{
+					"callFunction": "UPDATEVISUALSCORE3",
+					"sid": 584214110743110
+				},
+				{
+					"callFunction": "NEXTQUESTION3",
+					"sid": 109832891780996
+				}
+			],
+			"sid": 736265348515533
+		},
+		{
+			"functionName": "onWrongAnswerQuiz3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 408625212856351,
+					"parameters": {
+						"variable": "SCORE3",
+						"value": "100"
+					}
+				},
+				{
+					"callFunction": "UPDATEVISUALSCORE3",
+					"sid": 508782193453693
+				},
+				{
+					"callFunction": "NEXTQUESTION3",
+					"sid": 200231814415687
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "LOPE",
+					"sid": 550361755280719,
+					"parameters": {
+						"frame-number": "LOPE.AnimationFrame+1"
+					}
+				}
+			],
+			"sid": 123776897025852
+		},
+		{
+			"functionName": "NEXTQUESTION3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 545829032832602,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 874674113985123,
+					"parameters": {
+						"variable": "INDEX3",
+						"value": "INDEX3+1"
+					}
+				}
+			],
+			"sid": 843767930503160,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 782609400768667,
+							"parameters": {
+								"first-value": "INDEX3",
+								"comparison": 2,
+								"second-value": "QUIZARRAY3.Width"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "LOADQUIZ3",
+							"sid": 123950531072716
+						}
+					],
+					"sid": 594498453786212
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 922994579112900
+						}
+					],
+					"actions": [],
+					"sid": 574116871066165
+				}
+			]
+		},
+		{
+			"functionName": "UPDATEVISUALSCORE3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Score3",
+					"sid": 265768503564492,
+					"parameters": {
+						"text": "SCORE3"
+					}
+				}
+			],
+			"sid": 251226685130468
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FAMILY",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "BTNFAM3",
+							"sid": 705789459886832,
+							"parameters": {
+								"scale": "1.5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 579247876869300,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "BTNFAM3",
+							"sid": 509220527273607,
+							"parameters": {
+								"scale": "1"
+							}
+						}
+					],
+					"sid": 579509726149493
+				}
+			],
+			"sid": 318671984716791
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 662930650263521,
+					"parameters": {
+						"variable": "SCORE3",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Score3",
+					"sid": 732500194317956,
+					"parameters": {
+						"text": "0"
+					}
+				}
+			],
+			"sid": 424128916854426
+		}
+	],
+	"sid": 355860860500508
+}

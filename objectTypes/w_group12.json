@@ -1,0 +1,37 @@
+{
+	"name": "w_Group12",
+	"plugin-id": "Sprite",
+	"sid": 943038767867837,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 593,
+						"height": 367,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1573086,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 540778339256140,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

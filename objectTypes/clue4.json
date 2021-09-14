@@ -1,0 +1,57 @@
+{
+	"name": "Clue4",
+	"plugin-id": "Sprite",
+	"sid": 929833782679663,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 57,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5669960,
+						"collisionPoly": {
+							"points": [
+								0.017543859649122806,
+								0.015384615384615385,
+								0.5,
+								0,
+								0.9122807017543859,
+								0.06153846153846154,
+								0.9824561403508771,
+								0.5,
+								0.9473684210526315,
+								0.9538461538461539,
+								0.5,
+								0.9846153846153847,
+								0.05263157894736842,
+								0.9384615384615385,
+								0.12280701754385964,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 562400012119215,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

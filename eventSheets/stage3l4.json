@@ -1,0 +1,430 @@
+{
+	"name": "stage3l4",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "setl4",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 704909344326706
+		},
+		{
+			"eventType": "variable",
+			"name": "scorel4",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 488487646887920
+		},
+		{
+			"eventType": "variable",
+			"name": "indexl4",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 600831706517302
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "awal4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 557409491571081
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "w_Sprite105",
+							"sid": 336410326198592,
+							"parameters": {
+								"animation": "\"setl4\"&setl4",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "w_Sprite105",
+							"sid": 166498803291452
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 688667715316825,
+							"parameters": {
+								"variable": "scorel4",
+								"value": "0"
+							}
+						},
+						{
+							"callFunction": "updatevisualscorel4",
+							"sid": 396447103523128
+						}
+					],
+					"sid": 219701903140921
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "correctl4",
+							"sid": 518459455492867
+						}
+					],
+					"sid": 893181473311025,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite102",
+									"sid": 199554760546117,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Sprite108",
+									"sid": 624328714701461,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite102",
+									"sid": 410723643935384
+								}
+							],
+							"sid": 953340314906170
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite102",
+									"sid": 313906658786862,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "w_Sprite105",
+									"sid": 970719917924494,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite102",
+									"sid": 712341332563385
+								}
+							],
+							"sid": 916888335171811
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite102",
+									"sid": 204543472561430,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "w_Sprite107",
+									"sid": 796034334205270,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite102",
+									"sid": 528833355390352
+								}
+							],
+							"sid": 990008902154128
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite102",
+									"sid": 496577357356585,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "w_Sprite106",
+									"sid": 445277309577143,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite102",
+									"sid": 341105446540777
+								}
+							],
+							"sid": 810270514976144
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "wrongl4",
+							"sid": 475063612907934
+						},
+						{
+							"id": "destroy",
+							"objectClass": "w_Sprite101",
+							"sid": 948171490471538
+						}
+					],
+					"sid": 276493414151812
+				}
+			],
+			"sid": 662288395595729
+		},
+		{
+			"functionName": "correctl4",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 613574667416079,
+					"parameters": {
+						"variable": "scorel4",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 131188813771121,
+					"parameters": {
+						"layer": "\"tru\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 502202618596448,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 765756237491207,
+					"parameters": {
+						"layer": "\"tru\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "updatevisualscorel4",
+					"sid": 388886285203089
+				}
+			],
+			"sid": 133851381724222
+		},
+		{
+			"functionName": "wrongl4",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 693150583973340,
+					"parameters": {
+						"variable": "scorel4",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 237715588772897,
+					"parameters": {
+						"layer": "\"fals\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 236810781659170,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 505768166966059,
+					"parameters": {
+						"layer": "\"fals\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "updatevisualscorel4",
+					"sid": 855825256741350
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "lovee",
+					"sid": 321253766282574,
+					"parameters": {
+						"frame-number": "lovee.AnimationFrame+1"
+					}
+				}
+			],
+			"sid": 328977892761406
+		},
+		{
+			"functionName": "updatevisualscorel4",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "scorel4",
+					"sid": 610508289137506,
+					"parameters": {
+						"text": "scorel4"
+					}
+				}
+			],
+			"sid": 198076892646012
+		},
+		{
+			"functionName": "loadl4",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "w_Sprite105",
+					"sid": 829904381558892
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "w_Sprite105",
+					"sid": 642870514754106,
+					"parameters": {
+						"animation": "\"indexl4\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 266911714684367
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 392437095543704,
+					"parameters": {
+						"variable": "scorel4",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "scorel4",
+					"sid": 354512971299356,
+					"parameters": {
+						"text": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 872695309436440,
+					"parameters": {
+						"variable": "scorel4",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 751702341336877
+		}
+	],
+	"sid": 936299571663063
+}

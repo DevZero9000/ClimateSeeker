@@ -1,0 +1,1401 @@
+{
+	"name": "Lvl 2 Sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Health1",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 188322779629701
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 874521768712940
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 458509001327868,
+					"parameters": {
+						"layer": "\"Game Over\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 162623006741009,
+					"parameters": {
+						"layer": "\"Game Objective\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 553664903779438,
+					"parameters": {
+						"time-scale": "0"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 635998705233866
+				}
+			],
+			"sid": 597491331647524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 204039010272996,
+					"parameters": {
+						"object": "button_objective"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 790253472887242,
+					"parameters": {
+						"layer": "\"Game Objective\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 222138168533758,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				}
+			],
+			"sid": 507776801790015
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Player",
+							"sid": 958240166287805,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 565844875969339,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 670059495900871
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Player",
+							"sid": 758155718104734,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 851814927324006,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 346917460893735
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Player",
+							"sid": 951993637101658,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 193281891705890,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 769874411881651
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Player",
+							"sid": 454415555976185,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 253429708841418,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 496898624856895,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 140620276347134,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 933789705133274
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 973989816730983,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 995795439566364,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 231735805812173
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "Player",
+							"sid": 191169376436671,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 687443430418926,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 888843125875273
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 955391570930850,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 721938082890211,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 519153417367044,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 791836952364987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 530342461911555,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 145308585117329,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 534382120289927,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 733447040169759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 276368522993719,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 600075141510423,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 560288525050102
+				}
+			],
+			"sid": 374274697355837
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 835708857459922,
+					"parameters": {
+						"object": "Sprite8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 552166348134771,
+					"parameters": {
+						"variable": "Score",
+						"value": "25"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtScore",
+					"sid": 212639601573381,
+					"parameters": {
+						"text": "Score"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite8",
+					"sid": 851685968858618
+				}
+			],
+			"sid": 362988383487476
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 167161747717608,
+					"parameters": {
+						"object": "TiledBackground11"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "flash",
+					"objectClass": "Player",
+					"sid": 987999952753665,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 904735183750283,
+					"parameters": {
+						"variable": "Health1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 257095907469012,
+					"parameters": {
+						"x": "41",
+						"y": "452"
+					}
+				}
+			],
+			"sid": 476454653512140
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 774163492481098,
+					"parameters": {
+						"object": "Sprite8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite8",
+					"sid": 108168948682751
+				}
+			],
+			"sid": 669737953471271
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameOver",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 181683660423909,
+							"parameters": {
+								"variable": "Health1",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerHealth",
+							"sid": 466096821130424,
+							"parameters": {
+								"animation": "\"FullHealth\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 374212581782029
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 677062893651397,
+							"parameters": {
+								"variable": "Health1",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerHealth",
+							"sid": 299745018332194,
+							"parameters": {
+								"animation": "\"Health2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 823466549943757
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 793564968310902,
+							"parameters": {
+								"variable": "Health1",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerHealth",
+							"sid": 230674819571331,
+							"parameters": {
+								"animation": "\"Health1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 630394467391355
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 492063999191499,
+							"parameters": {
+								"variable": "Health1",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerHealth",
+							"sid": 980905599949797,
+							"parameters": {
+								"animation": "\"NoHealth\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 871929584630714,
+							"parameters": {
+								"layer": "\"Game Over\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 849874221426844,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 336000806477409
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 741393254238876,
+							"parameters": {
+								"object": "Restart_GameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 680908108563787,
+							"parameters": {
+								"layer": "\"Game Over\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 557826970877994
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 453210699984895,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 220523462344958
+				}
+			],
+			"sid": 586987798382110
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Lvl Complete2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 765655825914281,
+							"parameters": {
+								"object": "door_trigger"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 984469311459096,
+							"parameters": {
+								"variable": "clueScore",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "door_trigger",
+							"sid": 485078052383996,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "door_trigger",
+							"sid": 225751813699937
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "cave_complete",
+							"sid": 231825148951070,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "cave_complete",
+							"sid": 802020674865225,
+							"parameters": {
+								"animation": "\"Open\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 869089447600848
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 311439008515260,
+							"parameters": {
+								"object": "cave_complete"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 199330793550598,
+							"parameters": {
+								"layer": "\"Level Complete\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 717726162481803,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txtScore_complete",
+							"sid": 484466911610404,
+							"parameters": {
+								"text": "Score"
+							}
+						}
+					],
+					"sid": 245713440928578
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 506831359164544,
+							"parameters": {
+								"object": "next_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 639222883569145,
+							"parameters": {
+								"layer": "\"Level Complete\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 379400195897272,
+							"parameters": {
+								"layout": "Level Selection"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 936199248952872,
+							"parameters": {
+								"layer": "\"Level Complete\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 177972222506627,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 327906505738307
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 708231263026977,
+							"parameters": {
+								"object": "back_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 975044387303200,
+							"parameters": {
+								"layer": "\"Level Complete\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 256306652293178
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 585808319236320
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 262311105272362,
+							"parameters": {
+								"layer": "\"Level Complete\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 194927938702932,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 131945185579117
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 263723435578089,
+							"parameters": {
+								"variable": "Score",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 749348100664942,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 448200810794087
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 280251918550294,
+							"parameters": {
+								"variable": "Score",
+								"comparison": 5,
+								"value": "500"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 374621384563122,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 338914026709442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 822188616001132,
+							"parameters": {
+								"variable": "Score",
+								"comparison": 5,
+								"value": "800"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 342516738707307,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 384360584874611
+				}
+			],
+			"sid": 892697409046274
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Clue2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 203180198719956,
+							"parameters": {
+								"object": "clueLVL2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 209619622341325,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 793471018866807,
+							"parameters": {
+								"variable": "clueScore",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "clueScore",
+							"sid": 167725202129523,
+							"parameters": {
+								"text": "clueScore"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "clueLVL2_1",
+							"sid": 748804981388325
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 316090704389867,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 737075731815735
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 784287731553899,
+							"parameters": {
+								"object": "clueLVL2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 128645512246219,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 416267609220173,
+							"parameters": {
+								"variable": "clueScore",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "clueScore",
+							"sid": 653332770508207,
+							"parameters": {
+								"text": "clueScore"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 825359812915534,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "clueLVL2_2",
+							"sid": 292394654992572
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "clue_popup_2",
+							"sid": 320067107798563,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 547199367844194
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 699615478145944,
+							"parameters": {
+								"object": "clueLVL2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 317680975120355,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 843912571325166,
+							"parameters": {
+								"variable": "clueScore",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "clueScore",
+							"sid": 231316056129692,
+							"parameters": {
+								"text": "clueScore"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 453121259590479,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "clueLVL2_3",
+							"sid": 359222397740713
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "clue_popup_2",
+							"sid": 694008824249146,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 387813199658221
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 786118742352508,
+							"parameters": {
+								"object": "clueLVL2_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 678109524264742,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 818137127245164,
+							"parameters": {
+								"variable": "clueScore",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "clueScore",
+							"sid": 874095893861911,
+							"parameters": {
+								"text": "clueScore"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 408429973156908,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "clueLVL2_4",
+							"sid": 907818100261188
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "clue_popup_2",
+							"sid": 960650313717951,
+							"parameters": {
+								"frame-number": "3"
+							}
+						}
+					],
+					"sid": 172106093864157
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 210452600250689,
+							"parameters": {
+								"object": "clueLVL2_5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 813638752007574,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 476003947297592,
+							"parameters": {
+								"variable": "clueScore",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "clueScore",
+							"sid": 399365755166526,
+							"parameters": {
+								"text": "clueScore"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 917586510060829,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "clueLVL2_5",
+							"sid": 953969176701634
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "clue_popup_2",
+							"sid": 368648783617332,
+							"parameters": {
+								"frame-number": "4"
+							}
+						}
+					],
+					"sid": 610736719468005
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 947027882490906,
+							"parameters": {
+								"object": "B_Next_Clue"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 604842987465599,
+							"parameters": {
+								"layer": "\"Clue Popup\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 889249621135754,
+							"parameters": {
+								"layer": "\"Clue Popup\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 398293847993992,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 394529186168067
+				}
+			],
+			"sid": 333160253673180
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GamePause",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 608815463822944,
+							"parameters": {
+								"object": "pause_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "pause_button",
+							"sid": 109335094830675,
+							"parameters": {
+								"scale": "1.2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 494147443908789,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "pause_button",
+							"sid": 971376705626633,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 416967618638831,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 916616856421913,
+							"parameters": {
+								"layer": "\"Game Paused\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 935152204760319,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 496586538446454,
+							"parameters": {
+								"group-name": "\"Movement2\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 935211048231460
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 691240433481533,
+							"parameters": {
+								"object": "resume_pause"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 961640201633708,
+							"parameters": {
+								"layer": "\"Game Paused\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 214464708318668,
+							"parameters": {
+								"layer": "\"Game Paused\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 801306051784679,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 335474514545860,
+							"parameters": {
+								"group-name": "\"Movement2\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 169672664178410
+				}
+			],
+			"sid": 709739390511747
+		}
+	],
+	"sid": 871380465795269
+}

@@ -1,0 +1,65 @@
+{
+	"name": "Group20",
+	"plugin-id": "Sprite",
+	"sid": 736495957331655,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 193,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7222411,
+						"collisionPoly": {
+							"points": [
+								0.025906735751295335,
+								0.1,
+								0.5,
+								0,
+								0.7823834196891192,
+								0.5,
+								0.5,
+								0.72,
+								0.07253886010362694,
+								0.7,
+								0.0051813471502590676,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 193,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8514965,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 581638888332236,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

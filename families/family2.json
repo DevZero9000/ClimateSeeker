@@ -1,0 +1,21 @@
+{
+	"name": "Family2",
+	"plugin-id": "Sprite",
+	"sid": 124891186494639,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Sprite40",
+		"Sprite38",
+		"Sprite39",
+		"Sprite41",
+		"next_arrow",
+		"Sprite43",
+		"previous_arrow",
+		"Sprite63",
+		"Sprite64",
+		"Sprite65",
+		"Sprite66"
+	]
+}

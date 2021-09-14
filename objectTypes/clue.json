@@ -1,0 +1,64 @@
+{
+	"name": "clue",
+	"plugin-id": "Sprite",
+	"sid": 696542890518040,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "clue",
+			"type": "number",
+			"desc": "",
+			"sid": 969520591019022
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 58,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7328922,
+						"collisionPoly": {
+							"points": [
+								0.022222222222222223,
+								0.018867924528301886,
+								0.5,
+								0,
+								0.9555555555555556,
+								0.018867924528301886,
+								0.9777777777777777,
+								0.5,
+								0.9555555555555556,
+								0.9622641509433962,
+								0.5,
+								0.9811320754716981,
+								0.022222222222222223,
+								0.9622641509433962,
+								0.15555555555555556,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 505333156190102,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

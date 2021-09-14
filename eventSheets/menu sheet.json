@@ -1,0 +1,110 @@
+{
+	"name": "Menu Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 406298616957663,
+					"parameters": {
+						"object": "Sprite4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Sprite4",
+					"sid": 394944979048579,
+					"parameters": {
+						"scale": "1.2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 661320917815040,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "Sprite4",
+					"sid": 352171523946108,
+					"parameters": {
+						"scale": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 482268172336293,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 931989848440496,
+					"parameters": {
+						"layout": "Level Selection"
+					}
+				}
+			],
+			"sid": 701599854639512
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 727764787298709,
+					"parameters": {
+						"object": "Sprite6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Sprite6",
+					"sid": 567591143882773,
+					"parameters": {
+						"scale": "1.2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 134731793121473,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "Sprite6",
+					"sid": 702475295615037,
+					"parameters": {
+						"scale": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 887282055606298,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				}
+			],
+			"sid": 273842603452786
+		}
+	],
+	"sid": 327076609601985
+}

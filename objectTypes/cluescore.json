@@ -1,0 +1,16 @@
+{
+	"name": "clueScore",
+	"plugin-id": "Text",
+	"sid": 647901268024086,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "clueScore",
+			"type": "number",
+			"desc": "",
+			"sid": 333636858825055
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

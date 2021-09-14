@@ -1,0 +1,68 @@
+{
+	"name": "box",
+	"plugin-id": "Sprite",
+	"sid": 523767081543796,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 643431082884454
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 889933327428199
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 102,
+						"height": 101,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6247629,
+						"collisionPoly": {
+							"points": [
+								0.12745098039215685,
+								0.12871287128712872,
+								0.5,
+								0.12871287128712872,
+								0.8627450980392157,
+								0.12871287128712872,
+								0.8921568627450981,
+								0.5,
+								0.9019607843137255,
+								0.900990099009901,
+								0.5,
+								0.9207920792079208,
+								0.08823529411764706,
+								0.900990099009901,
+								0.08823529411764706,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 944933374943516,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

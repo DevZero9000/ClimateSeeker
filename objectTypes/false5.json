@@ -1,0 +1,56 @@
+{
+	"name": "False5",
+	"plugin-id": "Sprite",
+	"sid": 381204665096219,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "fa5",
+			"type": "number",
+			"desc": "",
+			"sid": 376466921926265
+		},
+		{
+			"name": "far5",
+			"type": "number",
+			"desc": "",
+			"sid": 875500518098406
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 910061968185315
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 183,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 20284,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 694213721107859,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

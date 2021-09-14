@@ -1,0 +1,69 @@
+{
+	"name": "Group18",
+	"plugin-id": "Sprite",
+	"sid": 434433152801865,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 179,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7951069,
+						"collisionPoly": {
+							"points": [
+								0.0335195530726257,
+								0.12,
+								0.5,
+								0,
+								0.8324022346368715,
+								0.58,
+								0.8435754189944135,
+								0.5,
+								0.8435754189944135,
+								0.44,
+								0.5,
+								0.72,
+								0.07262569832402235,
+								0.72,
+								0.00558659217877095,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 179,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8479828,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 376331831289966,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

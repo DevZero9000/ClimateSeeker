@@ -1,0 +1,57 @@
+{
+	"name": "Quiz1_Correct",
+	"plugin-id": "Sprite",
+	"sid": 819378309550863,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 342,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 816885,
+						"collisionPoly": {
+							"points": [
+								0.038011695906432746,
+								0.17567567567567569,
+								0.5,
+								0.04054054054054054,
+								0.9590643274853801,
+								0.17567567567567569,
+								0.9736842105263158,
+								0.5,
+								0.9444444444444444,
+								0.7432432432432432,
+								0.5,
+								0.7972972972972973,
+								0.05263157894736842,
+								0.7432432432432432,
+								0.023391812865497075,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 757444723489556,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

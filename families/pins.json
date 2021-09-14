@@ -1,0 +1,15 @@
+{
+	"name": "pins",
+	"plugin-id": "Sprite",
+	"sid": 884502650051790,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"no1_pin",
+		"no2_pin",
+		"no3_pin",
+		"no4_pin",
+		"no6_pin"
+	]
+}

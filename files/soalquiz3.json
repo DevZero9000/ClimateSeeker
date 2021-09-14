@@ -1,0 +1,65 @@
+{
+    "c2array": true,
+    "size": [
+        5,
+        3,
+        1
+    ],
+    "data": [
+        [
+            [
+                0
+            ],
+            [
+                "Continental climates are found inland, away from Jungle"
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                1
+            ],
+            [
+                "The vegetation of continental climate typically includes silver maple trees"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                2
+            ],
+            [
+                "continental climates typically have a large range in temperature between summer and winter"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                3
+            ],
+            [
+                "Coastal climates experience the most extreme weather changes."
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                4
+            ],
+            [
+                "Thunderstorms, tornadoes, hail and other weather phenomenon occur in continental climate"
+            ],
+            [
+                "True"
+            ]
+        ]
+    ]
+}

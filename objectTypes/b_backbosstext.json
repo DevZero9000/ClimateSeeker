@@ -1,0 +1,57 @@
+{
+	"name": "B_BackBossText",
+	"plugin-id": "Sprite",
+	"sid": 893646834046420,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 159,
+						"height": 63,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9513857,
+						"collisionPoly": {
+							"points": [
+								0.06918238993710692,
+								0.1746031746031746,
+								0.5,
+								0.12698412698412698,
+								0.9245283018867925,
+								0.1746031746031746,
+								0.9937106918238994,
+								0.5,
+								0.9245283018867925,
+								0.8095238095238095,
+								0.5,
+								0.873015873015873,
+								0.06918238993710692,
+								0.8095238095238095,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 489577044626666,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

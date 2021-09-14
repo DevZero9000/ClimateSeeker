@@ -1,0 +1,28 @@
+{
+	"name": "Family1",
+	"plugin-id": "Sprite",
+	"sid": 520296352056093,
+	"instanceVariables": [
+		{
+			"name": "Show",
+			"type": "boolean",
+			"desc": "",
+			"sid": 867783583898901
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 560286505277945
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Sprite20",
+		"Sprite24",
+		"Sprite23",
+		"Sprite18",
+		"Sprite22"
+	]
+}

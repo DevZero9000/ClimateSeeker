@@ -1,0 +1,26 @@
+{
+	"name": "TiledBackground12",
+	"plugin-id": "TiledBg",
+	"sid": 234327084016421,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 239108603190887
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 56,
+		"height": 27,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 5699342,
+		"useCollisionPoly": true
+	}
+}

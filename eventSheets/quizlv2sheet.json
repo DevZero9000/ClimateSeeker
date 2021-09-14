@@ -1,0 +1,776 @@
+{
+	"name": "Quizlv2sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "stagequiz2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 786374367766794
+		},
+		{
+			"eventType": "variable",
+			"name": "index2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 636959497391951
+		},
+		{
+			"eventType": "variable",
+			"name": "scoreincre2",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 520923043705046
+		},
+		{
+			"eventType": "variable",
+			"name": "nilaiquiz2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 865674653797594
+		},
+		{
+			"eventType": "variable",
+			"name": "score2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 477287417742101
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 816668833211196
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 360151960677059,
+					"parameters": {
+						"variable": "index2",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 724597804757134,
+					"parameters": {
+						"variable": "score2",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "Updateviscore",
+					"sid": 601150500387098
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "w_Sprite30",
+					"sid": 633701689979632,
+					"parameters": {
+						"animation": "\"stage\"&stagequiz2",
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "w_Sprite30",
+					"sid": 777303765296239
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "w_AJAX",
+					"sid": 153806358390001,
+					"parameters": {
+						"tag": "\"soalquiz1\"",
+						"file": "soalquiz1.json"
+					}
+				}
+			],
+			"sid": 639603123867046
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "w_AJAX",
+					"sid": 727152527784007,
+					"parameters": {
+						"tag": "\"soalquiz1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear",
+					"objectClass": "basequiz2",
+					"sid": 470298538163805,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "load",
+					"objectClass": "basequiz2",
+					"sid": 494448660415101,
+					"parameters": {
+						"json": "w_AJAX.LastData"
+					}
+				},
+				{
+					"id": "load",
+					"objectClass": "quizarray2",
+					"sid": 114161319384804,
+					"disabled": true,
+					"parameters": {
+						"json": "w_AJAX.LastData"
+					}
+				},
+				{
+					"callFunction": "randomquiz2",
+					"sid": 968494296926131
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 295206770229104
+				},
+				{
+					"id": "load",
+					"objectClass": "basequiz2",
+					"sid": 493945097882143,
+					"parameters": {
+						"json": "w_AJAX.LastData"
+					}
+				},
+				{
+					"callFunction": "loadquiz2",
+					"sid": 903251008337043
+				}
+			],
+			"sid": 592049643804337
+		},
+		{
+			"functionName": "randomquiz2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 596090948570897,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "Randomindex2",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 176117514332616
+				},
+				{
+					"eventType": "variable",
+					"name": "2widthofarray",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 478486107107288
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 763246798388313,
+							"parameters": {
+								"variable": "2widthofarray",
+								"value": "basequiz2.Width"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "quizarray2",
+							"sid": 847050007558320,
+							"parameters": {
+								"width": "0",
+								"height": "basequiz2.Height",
+								"depth": "1"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "w_Browser",
+							"sid": 689147790283431,
+							"disabled": true,
+							"parameters": {
+								"type": "log",
+								"message": "\"Reset quiz Array to size 0\""
+							}
+						}
+					],
+					"sid": 793610887775902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 712680341654941,
+							"parameters": {
+								"name": "\"randomArray2\"",
+								"start-index": "0",
+								"end-index": "2widthofarray-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 992491417894805,
+							"parameters": {
+								"variable": "Randomindex2",
+								"value": "floor(random(0,basequiz2.Width))"
+							}
+						},
+						{
+							"id": "push",
+							"objectClass": "quizarray2",
+							"sid": 556905519329165,
+							"parameters": {
+								"where": "back",
+								"value": "0",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "quizarray2",
+							"sid": 753640093828905,
+							"parameters": {
+								"x": "quizarray2.Width-1",
+								"y": "0",
+								"value": "basequiz2.At(Randomindex2,0)"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "quizarray2",
+							"sid": 760271514095281,
+							"parameters": {
+								"x": "quizarray2.Width-1",
+								"y": "1",
+								"value": "basequiz2.At(Randomindex2,1)"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "quizarray2",
+							"sid": 283600587338925,
+							"parameters": {
+								"x": "quizarray2.Width-1",
+								"y": "2",
+								"value": "basequiz2.At(Randomindex2,2)"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "basequiz2",
+							"sid": 693655027789588,
+							"parameters": {
+								"index": "Randomindex2",
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 650397762008880
+				}
+			]
+		},
+		{
+			"functionName": "loadquiz2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "w_Sprite30",
+					"sid": 221698960000103
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "w_Sprite30",
+					"sid": 491676642260737,
+					"parameters": {
+						"frame-number": "quizarray2.At(index2,0)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "soal2",
+					"sid": 927257039851642,
+					"parameters": {
+						"text": "quizarray2.At(index2,1)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "status2",
+					"sid": 553405767900526,
+					"parameters": {
+						"text": "index2+1 &\"/\"&quizarray2.Width"
+					}
+				}
+			],
+			"sid": 962683527890615
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CheckAnswer & NextQuestions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 575170099309056,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 544504151320973,
+									"parameters": {
+										"first-value": "quizarray2.At(index2,2)",
+										"comparison": 0,
+										"second-value": "\"True\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onCorrectAnswerQuiz",
+									"sid": 434058608230282
+								}
+							],
+							"sid": 236631617621294
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 407093263438200,
+									"parameters": {
+										"first-value": "quizarray2.At(index2,2)",
+										"comparison": 0,
+										"second-value": "\"False\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onWrongAnswerQuiz",
+									"sid": 473936499508093
+								}
+							],
+							"sid": 197611081446865
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 772879958801980,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 356653177322225,
+									"parameters": {
+										"first-value": "quizarray2.At(index2,2)",
+										"comparison": 0,
+										"second-value": "\"True\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onWrongAnswerQuiz",
+									"sid": 166184265494173
+								}
+							],
+							"sid": 381907605800648
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 308691950629025,
+									"parameters": {
+										"first-value": "quizarray2.At(index2,2)",
+										"comparison": 0,
+										"second-value": "\"False\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "onCorrectAnswerQuiz",
+									"sid": 909463533950246
+								}
+							],
+							"sid": 563661049002810
+						}
+					]
+				}
+			],
+			"sid": 478578151410191
+		},
+		{
+			"functionName": "onCorrectAnswerQuiz",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 156177816698787,
+					"parameters": {
+						"variable": "score2",
+						"value": "200"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 147901692002105,
+					"parameters": {
+						"layer": "\"popupbenar2\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 999050072842421,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 603056245297326,
+					"parameters": {
+						"layer": "\"popupbenar2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "Updateviscore",
+					"sid": 512512280875632
+				},
+				{
+					"callFunction": "nextQuestions",
+					"sid": 202237762749369
+				}
+			],
+			"sid": 463256378542985
+		},
+		{
+			"functionName": "onWrongAnswerQuiz",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 684177459452747,
+					"parameters": {
+						"variable": "score2",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 895479774517326,
+					"parameters": {
+						"layer": "\"popupsalah2\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 176663434353213,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 653590073403462,
+					"parameters": {
+						"layer": "\"popupsalah2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "Updateviscore",
+					"sid": 644553508222438
+				},
+				{
+					"callFunction": "nextQuestions",
+					"sid": 481620738173559
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "hati",
+					"sid": 144012578228988,
+					"parameters": {
+						"frame-number": "hati.AnimationFrame+1"
+					}
+				}
+			],
+			"sid": 747504045193124
+		},
+		{
+			"functionName": "nextQuestions",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 530604805580449,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 242983121531814,
+					"parameters": {
+						"variable": "index2",
+						"value": "index2+1"
+					}
+				}
+			],
+			"sid": 661685252735296,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 317397311980508,
+							"parameters": {
+								"first-value": "index2",
+								"comparison": 2,
+								"second-value": "quizarray2.Width"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "loadquiz2",
+							"sid": 941076966039712
+						}
+					],
+					"sid": 123604502270373
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 577393086664934
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 106166212083649,
+							"parameters": {
+								"layout": "stage3l2"
+							}
+						},
+						{
+							"callFunction": "loadquiz2",
+							"sid": 649389466534960,
+							"disabled": true
+						}
+					],
+					"sid": 762345794337854
+				}
+			]
+		},
+		{
+			"functionName": "Updateviscore",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "score2",
+					"sid": 553792511763584,
+					"parameters": {
+						"text": "score2"
+					}
+				}
+			],
+			"sid": 178443708435938
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Family event2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "btnfam2",
+							"sid": 856559096106915,
+							"parameters": {
+								"scale": "1.5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 640209343682666,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "btnfam2",
+							"sid": 377658675849850,
+							"parameters": {
+								"scale": "1"
+							}
+						}
+					],
+					"sid": 286600055781999
+				}
+			],
+			"sid": 134662819201365
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 512898276567762,
+					"parameters": {
+						"variable": "score2",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 867925209431016,
+					"disabled": true,
+					"parameters": {
+						"variable": "score2",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "score2",
+					"sid": 768700999520734,
+					"parameters": {
+						"text": "0"
+					}
+				}
+			],
+			"sid": 862549693890270
+		}
+	],
+	"sid": 289204925264914
+}

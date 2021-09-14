@@ -1,0 +1,430 @@
+{
+	"name": "stage3",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "set1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 540757397362643
+		},
+		{
+			"eventType": "variable",
+			"name": "scorest3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 648970056701944
+		},
+		{
+			"eventType": "variable",
+			"name": "indexst3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 448147421333268
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "awal",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 901857215188899
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Group18",
+							"sid": 879827596745722,
+							"parameters": {
+								"animation": "\"set1\"&set1",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Group18",
+							"sid": 658004737745454
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 514048946394990,
+							"parameters": {
+								"variable": "scorest3",
+								"value": "0"
+							}
+						},
+						{
+							"callFunction": "updateviscorest3",
+							"sid": 653913142503750
+						}
+					],
+					"sid": 237567084057311
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "correct1",
+							"sid": 519692766489471
+						}
+					],
+					"sid": 737116165005144,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite40",
+									"sid": 115789053981623,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Group17",
+									"sid": 674305423963881,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite40",
+									"sid": 171938039207420
+								}
+							],
+							"sid": 856029653232590
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite40",
+									"sid": 245132981472330,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Group20",
+									"sid": 971130071181975,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite40",
+									"sid": 777434990843332
+								}
+							],
+							"sid": 296330413234830
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite40",
+									"sid": 900858929139229,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Group21",
+									"sid": 815865665512556,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite40",
+									"sid": 207125028633635
+								}
+							],
+							"sid": 779021634795704
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "w_Sprite40",
+									"sid": 765143621878128,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Group18",
+									"sid": 816065489362321,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "w_Sprite40",
+									"sid": 560423900825330
+								}
+							],
+							"sid": 619780496961073
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "wrongst1",
+							"sid": 344392627355816
+						},
+						{
+							"id": "destroy",
+							"objectClass": "w_Sprite46",
+							"sid": 771322288006376
+						}
+					],
+					"sid": 544034152481651
+				}
+			],
+			"sid": 201319201098618
+		},
+		{
+			"functionName": "correct1",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 159692692041697,
+					"parameters": {
+						"variable": "scorest3",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 560983166055684,
+					"parameters": {
+						"layer": "\"tr\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 231131165172455,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 530773755907024,
+					"parameters": {
+						"layer": "\"tr\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "updateviscorest3",
+					"sid": 152685593782743
+				}
+			],
+			"sid": 785043805268526
+		},
+		{
+			"functionName": "wrongst1",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 590836746532692,
+					"parameters": {
+						"variable": "scorest3",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 805459579269944,
+					"parameters": {
+						"layer": "\"loose\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 577301497012352,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 428891160771396,
+					"parameters": {
+						"layer": "\"loose\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "updateviscorest3",
+					"sid": 833405888846536
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "corazon",
+					"sid": 882394818639376,
+					"parameters": {
+						"frame-number": "corazon.AnimationFrame+1"
+					}
+				}
+			],
+			"sid": 488653465325016
+		},
+		{
+			"functionName": "updateviscorest3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "scorest3",
+					"sid": 854260379003707,
+					"parameters": {
+						"text": "scorest3"
+					}
+				}
+			],
+			"sid": 680676856846642
+		},
+		{
+			"functionName": "loadst3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "Group18",
+					"sid": 365131366484584
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Group18",
+					"sid": 367901342481155,
+					"parameters": {
+						"animation": "\"indexst3\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 857822274915823
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 869781826548475,
+					"parameters": {
+						"variable": "scorest3",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "scorest3",
+					"sid": 530741297740764,
+					"parameters": {
+						"text": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 491532881924137,
+					"parameters": {
+						"variable": "scorest3",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 129918777710750
+		}
+	],
+	"sid": 170566697777584
+}

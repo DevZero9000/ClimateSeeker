@@ -1,0 +1,65 @@
+{
+    "c2array": true,
+    "size": [
+        5,
+        3,
+        1
+    ],
+    "data": [
+        [
+            [
+                0
+            ],
+            [
+                "With few clouds, dry climate has hot days and nights"
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                1
+            ],
+            [
+                "The plants that grow in these areas are small"
+            ],
+            [
+                "False"
+            ]
+        ],
+        [
+            [
+                2
+            ],
+            [
+                "This climate receives very little rainfall"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                3
+            ],
+            [
+                "The soil is dry, the air is dry"
+            ],
+            [
+                "True"
+            ]
+        ],
+        [
+            [
+                4
+            ],
+            [
+                "A lot of animals that live in this climate is mammal"
+            ],
+            [
+                "False"
+            ]
+        ]
+    ]
+}

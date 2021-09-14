@@ -1,0 +1,57 @@
+{
+	"name": "clueLVL2_5",
+	"plugin-id": "Sprite",
+	"sid": 635109867409902,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 59,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4243651,
+						"collisionPoly": {
+							"points": [
+								0.03389830508474576,
+								0.03076923076923077,
+								0.5,
+								0,
+								0.9152542372881356,
+								0.06153846153846154,
+								0.9830508474576272,
+								0.5,
+								0.9491525423728814,
+								0.9538461538461539,
+								0.5,
+								0.9846153846153847,
+								0.05084745762711865,
+								0.9384615384615385,
+								0.13559322033898305,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 342637407125676,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

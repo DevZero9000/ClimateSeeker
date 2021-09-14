@@ -1,0 +1,12 @@
+{
+	"name": "BTNFAM3",
+	"plugin-id": "Sprite",
+	"sid": 158315312921700,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"CR3",
+		"WR3"
+	]
+}
