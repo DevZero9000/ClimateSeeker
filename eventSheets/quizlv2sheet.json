@@ -368,7 +368,16 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 121137886379153,
+							"parameters": {
+								"object": "cr2"
+							}
+						}
+					],
 					"actions": [],
 					"sid": 575170099309056,
 					"children": [
@@ -420,7 +429,16 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 123103607736565,
+							"parameters": {
+								"object": "wr2"
+							}
+						}
+					],
 					"actions": [],
 					"sid": 772879958801980,
 					"children": [

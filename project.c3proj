@@ -191,7 +191,7 @@
 			"txtScore_complete",
 			"next_complete",
 			"back_complete",
-			"gameOver_popuo",
+			"gameOver_popup",
 			"Restart_GameOver",
 			"Text",
 			"score_GameOver",
@@ -391,7 +391,8 @@
 			"w_backgroundGameplay2",
 			"w_Sprite63",
 			"w_Sprite67",
-			"quizarray"
+			"quizarray",
+			"home_gameOver"
 		],
 		"subfolders": [
 			{

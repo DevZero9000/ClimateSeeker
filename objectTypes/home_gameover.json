@@ -1,7 +1,7 @@
 {
-	"name": "gameOver_popuo",
+	"name": "home_gameOver",
 	"plugin-id": "Sprite",
-	"sid": 595108837701881,
+	"sid": 738915336227676,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,30 +11,30 @@
 			{
 				"frames": [
 					{
-						"width": 1024,
-						"height": 576,
+						"width": 159,
+						"height": 63,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 701204,
+						"imageSpriteId": 5717544,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
+								0.07547169811320754,
+								0.19047619047619047,
 								0.5,
-								0,
-								0.9990234375,
-								0,
-								0.9990234375,
+								0.14285714285714285,
+								0.9182389937106918,
+								0.19047619047619047,
+								0.9937106918238994,
 								0.5,
-								0.9990234375,
-								0.9982638888888888,
+								0.9308176100628931,
+								0.8253968253968254,
 								0.5,
-								0.9982638888888888,
-								0,
-								0.9982638888888888,
+								0.8888888888888888,
+								0.06289308176100629,
+								0.8253968253968254,
 								0,
 								0.5
 							]
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 708067366684244,
+				"sid": 314883987368487,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

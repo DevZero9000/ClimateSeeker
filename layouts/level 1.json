@@ -5965,7 +5965,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "gameOver_popuo",
+					"type": "gameOver_popup",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

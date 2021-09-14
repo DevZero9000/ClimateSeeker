@@ -615,6 +615,38 @@
 						}
 					],
 					"sid": 220523462344958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 502344072482388,
+							"parameters": {
+								"object": "home_gameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 654860777732459,
+							"parameters": {
+								"layer": "\"Game Over\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 973871557248060,
+							"parameters": {
+								"layout": "Main Menu"
+							}
+						}
+					],
+					"sid": 203359483018358
 				}
 			],
 			"sid": 586987798382110
