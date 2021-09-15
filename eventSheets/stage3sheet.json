@@ -1,5 +1,5 @@
 {
-	"name": "stage3",
+	"name": "stage3sheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -80,7 +80,16 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 263115601333676,
+							"parameters": {
+								"object": "w_Sprite40"
+							}
+						}
+					],
 					"actions": [
 						{
 							"callFunction": "correct1",
@@ -213,7 +222,16 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 176872618079282,
+							"parameters": {
+								"object": "w_Sprite46"
+							}
+						}
+					],
 					"actions": [
 						{
 							"callFunction": "wrongst1",

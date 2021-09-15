@@ -1,40 +1,40 @@
 {
-	"name": "stage3l2",
+	"name": "stage3l3sheet",
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "set3l2",
+			"name": "set3l3",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 875580788138945
+			"sid": 759495162227799
 		},
 		{
 			"eventType": "variable",
-			"name": "scorest3l2",
+			"name": "score3l3",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 476003704059103
+			"sid": 169071843564230
 		},
 		{
 			"eventType": "variable",
-			"name": "index3l",
+			"name": "index3l3",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 359329349940269
+			"sid": 453373061399623
 		},
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "awal3",
+			"title": "awall3",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -44,58 +44,67 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 107800128185871
+							"sid": 694191421892744
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "w_Sprite59",
-							"sid": 537404519660752,
+							"objectClass": "Sprite87",
+							"sid": 251868151382845,
 							"parameters": {
-								"animation": "\"set3l2\"&set3l2",
+								"animation": "\"set3l3\"&set3l3",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "stop-animation",
-							"objectClass": "w_Sprite59",
-							"sid": 338920962988499
+							"objectClass": "Sprite87",
+							"sid": 999832612171197
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 549348424756496,
+							"sid": 943297996675338,
 							"parameters": {
-								"variable": "scorest3l2",
+								"variable": "score3l3",
 								"value": "0"
 							}
 						},
 						{
-							"callFunction": "updateviscore3l2",
-							"sid": 979108932581328
+							"callFunction": "updatevisualscoe3l3",
+							"sid": 762559997572556
 						}
 					],
-					"sid": 181562044878813
+					"sid": 862878959141678
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [
+					"conditions": [
 						{
-							"callFunction": "correrct2",
-							"sid": 290704481287443
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 466646461032089,
+							"parameters": {
+								"object": "Sprite97"
+							}
 						}
 					],
-					"sid": 387992844735885,
+					"actions": [
+						{
+							"callFunction": "correct3",
+							"sid": 631861435772576
+						}
+					],
+					"sid": 996054894899493,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite52",
-									"sid": 750576755435842,
+									"objectClass": "Sprite97",
+									"sid": 247715227119578,
 									"parameters": {
 										"comparison": 0,
 										"number": "0"
@@ -105,27 +114,27 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "w_Sprite59",
-									"sid": 810645484528362,
+									"objectClass": "Sprite89",
+									"sid": 948962232178860,
 									"parameters": {
 										"frame-number": "1"
 									}
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite52",
-									"sid": 474805811061901
+									"objectClass": "Sprite97",
+									"sid": 439565084234023
 								}
 							],
-							"sid": 550109009122276
+							"sid": 195058433854204
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite52",
-									"sid": 338672777791720,
+									"objectClass": "Sprite97",
+									"sid": 892039991743441,
 									"parameters": {
 										"comparison": 0,
 										"number": "1"
@@ -135,27 +144,27 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "w_Sprite60",
-									"sid": 781316265300009,
+									"objectClass": "Sprite87",
+									"sid": 424431451155502,
 									"parameters": {
 										"frame-number": "1"
 									}
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite52",
-									"sid": 962237517546987
+									"objectClass": "Sprite97",
+									"sid": 117218276320462
 								}
 							],
-							"sid": 416066746779085
+							"sid": 407647339486299
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite52",
-									"sid": 226848331850103,
+									"objectClass": "Sprite97",
+									"sid": 988319011581078,
 									"parameters": {
 										"comparison": 0,
 										"number": "2"
@@ -165,27 +174,27 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "w_Sprite61",
-									"sid": 752595908133431,
+									"objectClass": "Sprite88",
+									"sid": 522843559865888,
 									"parameters": {
 										"frame-number": "1"
 									}
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite52",
-									"sid": 274251616670080
+									"objectClass": "Sprite97",
+									"sid": 503949748698384
 								}
 							],
-							"sid": 563438993095593
+							"sid": 495699305229533
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite52",
-									"sid": 424129762299852,
+									"objectClass": "Sprite97",
+									"sid": 380832999823275,
 									"parameters": {
 										"comparison": 0,
 										"number": "3"
@@ -195,43 +204,52 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "w_Sprite62",
-									"sid": 511961886526213,
+									"objectClass": "Sprite90",
+									"sid": 706179952921121,
 									"parameters": {
 										"frame-number": "1"
 									}
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite52",
-									"sid": 506243652560457
+									"objectClass": "Sprite97",
+									"sid": 792955341135833
 								}
 							],
-							"sid": 452390802124631
+							"sid": 418539006184310
 						}
 					]
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 255140494375416,
+							"parameters": {
+								"object": "Sprite96"
+							}
+						}
+					],
 					"actions": [
 						{
-							"callFunction": "wrongst2",
-							"sid": 450491362716971
+							"callFunction": "wrong3",
+							"sid": 747855275280324
 						},
 						{
 							"id": "destroy",
-							"objectClass": "w_Sprite53",
-							"sid": 568833637406982
+							"objectClass": "Sprite96",
+							"sid": 798931826210819
 						}
 					],
-					"sid": 496519269318708
+					"sid": 621626184204231
 				}
 			],
-			"sid": 532340938245091
+			"sid": 138080417898251
 		},
 		{
-			"functionName": "correrct2",
+			"functionName": "correct3",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -243,16 +261,16 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 297721808606250,
+					"sid": 502656467029714,
 					"parameters": {
-						"variable": "scorest3l2",
+						"variable": "score3l3",
 						"value": "100"
 					}
 				},
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 163323565794954,
+					"sid": 466121067369135,
 					"parameters": {
 						"layer": "\"true\"",
 						"visibility": "visible"
@@ -261,7 +279,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 136864567632380,
+					"sid": 232768681583056,
 					"parameters": {
 						"seconds": "1.0"
 					}
@@ -269,21 +287,21 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 539239517130211,
+					"sid": 162085665800178,
 					"parameters": {
 						"layer": "\"true\"",
 						"visibility": "invisible"
 					}
 				},
 				{
-					"callFunction": "updateviscore3l2",
-					"sid": 988598674420210
+					"callFunction": "updatevisualscoe3l3",
+					"sid": 295564705524922
 				}
 			],
-			"sid": 840360185107639
+			"sid": 717336393636190
 		},
 		{
-			"functionName": "wrongst2",
+			"functionName": "wrong3",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -295,25 +313,25 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 667902383542216,
+					"sid": 989093939205157,
 					"parameters": {
-						"variable": "scorest3l2",
+						"variable": "score3l3",
 						"value": "100"
 					}
 				},
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 614017694503931,
+					"sid": 438085473484965,
 					"parameters": {
-						"layer": "\"lose\"",
+						"layer": "\"false\"",
 						"visibility": "visible"
 					}
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 839850633883684,
+					"sid": 330030105071143,
 					"parameters": {
 						"seconds": "1.0"
 					}
@@ -321,29 +339,29 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 483252125309915,
+					"sid": 686929117730069,
 					"parameters": {
-						"layer": "\"lose\"",
+						"layer": "\"false\"",
 						"visibility": "invisible"
 					}
 				},
 				{
-					"callFunction": "updateviscore3l2",
-					"sid": 832163588055333
+					"callFunction": "updatevisualscoe3l3",
+					"sid": 950038304538449
 				},
 				{
 					"id": "set-animation-frame",
-					"objectClass": "lov",
-					"sid": 374361967077829,
+					"objectClass": "love",
+					"sid": 288789612116045,
 					"parameters": {
-						"frame-number": "lov.AnimationFrame+1"
+						"frame-number": "love.AnimationFrame+1"
 					}
 				}
 			],
-			"sid": 296151195371523
+			"sid": 366648987262589
 		},
 		{
-			"functionName": "updateviscore3l2",
+			"functionName": "updatevisualscoe3l3",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -354,17 +372,17 @@
 			"actions": [
 				{
 					"id": "set-text",
-					"objectClass": "scorel2",
-					"sid": 136283759878074,
+					"objectClass": "scorel3l",
+					"sid": 212223287343346,
 					"parameters": {
-						"text": "scorest3l2"
+						"text": "score3l3"
 					}
 				}
 			],
-			"sid": 171717359458223
+			"sid": 225477334472471
 		},
 		{
-			"functionName": "load3",
+			"functionName": "load3l3",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -375,20 +393,20 @@
 			"actions": [
 				{
 					"id": "stop-animation",
-					"objectClass": "w_Sprite59",
-					"sid": 627737809247661
+					"objectClass": "Sprite87",
+					"sid": 700101338224427
 				},
 				{
 					"id": "set-animation",
-					"objectClass": "w_Sprite59",
-					"sid": 368144325435071,
+					"objectClass": "Sprite87",
+					"sid": 581214912704965,
 					"parameters": {
-						"animation": "\"index3l\"",
+						"animation": "\"index3l3\"",
 						"from": "beginning"
 					}
 				}
 			],
-			"sid": 948965664616916
+			"sid": 776271608076637
 		},
 		{
 			"eventType": "block",
@@ -396,9 +414,9 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 926491367611430,
+					"sid": 655384131833618,
 					"parameters": {
-						"variable": "scorest3l2",
+						"variable": "score3l3",
 						"comparison": 3,
 						"value": "0"
 					}
@@ -407,8 +425,8 @@
 			"actions": [
 				{
 					"id": "set-text",
-					"objectClass": "scorel2",
-					"sid": 712750248133986,
+					"objectClass": "scorel3l",
+					"sid": 195197106150876,
 					"parameters": {
 						"text": "0"
 					}
@@ -416,15 +434,15 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 585803810346975,
+					"sid": 639232069428557,
 					"parameters": {
-						"variable": "scorest3l2",
+						"variable": "score3l3",
 						"value": "0"
 					}
 				}
 			],
-			"sid": 345675822934797
+			"sid": 723043809189212
 		}
 	],
-	"sid": 836042199137713
+	"sid": 312992349995948
 }

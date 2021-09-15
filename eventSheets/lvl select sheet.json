@@ -223,6 +223,38 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 615617364247520,
+					"parameters": {
+						"object": "Sprite38"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 785268397968953,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 711009670744103,
+					"parameters": {
+						"layout": "stage3"
+					}
+				}
+			],
+			"sid": 867160907611658
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 740006332764224

@@ -486,13 +486,13 @@
 			"Menu Sheet",
 			"Lvl 2 Sheet",
 			"Climatrip Sheet",
-			"stage3l4",
-			"stage3l3",
-			"stage3l2",
-			"stage3",
+			"stage3l4sheet",
+			"stage3l3sheet",
+			"stage3l2sheet",
 			"Quizlv3sheet",
 			"Quizlv2sheet",
-			"Quizlv1sheet"
+			"Quizlv1sheet",
+			"stage3sheet"
 		],
 		"subfolders": []
 	},
