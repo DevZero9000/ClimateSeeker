@@ -184,7 +184,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -213,7 +213,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -242,7 +242,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -271,7 +271,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

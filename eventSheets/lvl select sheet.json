@@ -255,6 +255,134 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 625297012893164,
+					"parameters": {
+						"object": "selection_quiz2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 663832083396393,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 803417986219939,
+					"parameters": {
+						"layout": "Quizlv2"
+					}
+				}
+			],
+			"sid": 396363613406852
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 615507592539710,
+					"parameters": {
+						"object": "selection_trip2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 642619043061340,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 108837614949689,
+					"parameters": {
+						"layout": "stage3l2"
+					}
+				}
+			],
+			"sid": 510703102672928
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 598044111349639,
+					"parameters": {
+						"object": "selection_quiz3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 898831191825466,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 664625274541792,
+					"parameters": {
+						"layout": "Quizlv3"
+					}
+				}
+			],
+			"sid": 648549082710185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 324838657274932,
+					"parameters": {
+						"object": "selection_trip3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 357498588135729,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 548209304082025,
+					"parameters": {
+						"layout": "stage3l3"
+					}
+				}
+			],
+			"sid": 989302025287185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 740006332764224

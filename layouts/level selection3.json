@@ -35,7 +35,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -64,7 +64,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -93,7 +93,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -122,7 +122,7 @@
 					}
 				},
 				{
-					"type": "Sprite34",
+					"type": "selection_clue2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -180,7 +180,7 @@
 					}
 				},
 				{
-					"type": "Sprite68",
+					"type": "selection_clue3",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -209,7 +209,7 @@
 					}
 				},
 				{
-					"type": "Sprite69",
+					"type": "selection_quiz3",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -238,7 +238,7 @@
 					}
 				},
 				{
-					"type": "Sprite70",
+					"type": "selection_trip3",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -267,7 +267,7 @@
 					}
 				},
 				{
-					"type": "Sprite71",
+					"type": "selection_world3",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

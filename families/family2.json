@@ -14,8 +14,12 @@
 		"Sprite43",
 		"previous_arrow",
 		"Sprite63",
-		"Sprite64",
-		"Sprite65",
-		"Sprite66"
+		"selection_quiz2",
+		"selection_trip2",
+		"selection_world2",
+		"selection_quiz3",
+		"selection_trip3",
+		"selection_world3",
+		"selection_clue3"
 	]
 }
