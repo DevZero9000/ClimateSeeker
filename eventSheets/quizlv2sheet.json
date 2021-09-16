@@ -62,20 +62,34 @@
 			],
 			"actions": [
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 931474769546420,
+					"parameters": {
+						"layer": "\"GameOverQuiz2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 371108582754876
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 360151960677059,
+					"sid": 188389164527689,
 					"parameters": {
-						"variable": "index2",
+						"variable": "score2",
 						"value": "0"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 724597804757134,
+					"sid": 360151960677059,
 					"parameters": {
-						"variable": "score2",
+						"variable": "index2",
 						"value": "0"
 					}
 				},
@@ -543,6 +557,14 @@
 				{
 					"callFunction": "nextQuestions",
 					"sid": 202237762749369
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 966917203729582,
+					"parameters": {
+						"seconds": "1.0"
+					}
 				}
 			],
 			"sid": 463256378542985
@@ -593,6 +615,23 @@
 					}
 				},
 				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 108934330410723,
+					"parameters": {
+						"variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "hati",
+					"sid": 279249335429467,
+					"parameters": {
+						"frame-number": "hati.AnimationFrame+1"
+					}
+				},
+				{
 					"callFunction": "Updateviscore",
 					"sid": 644553508222438
 				},
@@ -601,11 +640,11 @@
 					"sid": 481620738173559
 				},
 				{
-					"id": "set-animation-frame",
-					"objectClass": "hati",
-					"sid": 144012578228988,
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 731664941365237,
 					"parameters": {
-						"frame-number": "hati.AnimationFrame+1"
+						"seconds": "1.0"
 					}
 				}
 			],
@@ -621,14 +660,6 @@
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 530604805580449,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
@@ -674,11 +705,12 @@
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
+							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 106166212083649,
+							"sid": 908407965922597,
 							"parameters": {
-								"layout": "stage3l2"
+								"layer": "\"GameCompleteQuiz2\"",
+								"visibility": "visible"
 							}
 						},
 						{
@@ -721,7 +753,16 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 486131632246417,
+							"parameters": {
+								"object": "btnfam2"
+							}
+						}
+					],
 					"actions": [
 						{
 							"id": "set-scale",
@@ -754,40 +795,374 @@
 			"sid": 134662819201365
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameOverQuiz2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 512898276567762,
-					"parameters": {
-						"variable": "score2",
-						"comparison": 3,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 867925209431016,
-					"disabled": true,
-					"parameters": {
-						"variable": "score2",
-						"value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 381372011422880,
+							"parameters": {
+								"variable": "Health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 685855284278505,
+							"parameters": {
+								"layer": "\"GameOverQuiz2\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 191515838573975,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 499058935193936
 				},
 				{
-					"id": "set-text",
-					"objectClass": "score2",
-					"sid": 768700999520734,
-					"parameters": {
-						"text": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 794244593663305,
+							"parameters": {
+								"object": "Restart_GameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 259802594815508,
+							"parameters": {
+								"layer": "\"GameOverQuiz2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 768587443269800
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 332973368283667,
+							"parameters": {
+								"layer": "\"GameOverQuiz2\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 794944828600280,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 853445855449332
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 397260096335526,
+							"parameters": {
+								"object": "home_gameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 207227773103234,
+							"parameters": {
+								"layer": "\"GameOverQuiz2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 918221797133541,
+							"parameters": {
+								"layout": "Main Menu"
+							}
+						}
+					],
+					"sid": 334282484119977
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 387741249647958,
+							"parameters": {
+								"variable": "score2",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 523962861839986,
+							"parameters": {
+								"variable": "score2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "score2",
+							"sid": 175012345593186,
+							"parameters": {
+								"text": "0"
+							}
+						}
+					],
+					"sid": 972432034075448
 				}
 			],
-			"sid": 862549693890270
+			"sid": 507802719124327
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameCompleteQuiz2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 113128908851128,
+							"parameters": {
+								"object": "next_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 725755503962059,
+							"parameters": {
+								"layer": "\"GameCompleteQuiz2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 482774148448660,
+							"parameters": {
+								"layout": "Level Selection"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 154600038529221,
+							"parameters": {
+								"layer": "\"GameCompleteQuiz2\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 624726039984925,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 617709223497854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 308389265096479,
+							"parameters": {
+								"object": "back_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 618812009917477,
+							"parameters": {
+								"layer": "\"GameCompleteQuiz2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 243447071486667
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 328339228991844
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 654062300458989,
+							"parameters": {
+								"layer": "\"GameCompleteQuiz2\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 298386750747159,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 209620128302195
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 347519033817595,
+							"parameters": {
+								"layer": "\"GameCompleteQuiz2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "txtScore_complete",
+							"sid": 497829921427903,
+							"parameters": {
+								"text": "score2"
+							}
+						}
+					],
+					"sid": 926689098115933
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 663821251062904,
+							"parameters": {
+								"variable": "score2",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 244046794495317,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 552287170604477
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 688257570051872,
+							"parameters": {
+								"variable": "score2",
+								"comparison": 5,
+								"value": "500"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 644049100524403,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 218093731850372
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 862204831111159,
+							"parameters": {
+								"variable": "score2",
+								"comparison": 5,
+								"value": "800"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 323486144821813,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 679440200680494
+				}
+			],
+			"sid": 845216565410131
 		}
 	],
 	"sid": 289204925264914

@@ -52,6 +52,20 @@
 			],
 			"actions": [
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 595837769867638,
+					"parameters": {
+						"layer": "\"GameOver\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 989493091101391
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 978492701779076,
@@ -683,9 +697,9 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 965504334360334,
+							"sid": 541052542635961,
 							"parameters": {
-								"layer": "\"GameComplete\"",
+								"layer": "\"GameCompleteQuiz2\"",
 								"visibility": "visible"
 							}
 						},
@@ -771,108 +785,127 @@
 			"sid": 879509318658457
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameOverQuiz1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 128470717620182,
-					"parameters": {
-						"variable": "Health",
-						"comparison": 3,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 633545530348425,
-					"parameters": {
-						"layer": "\"GameOver\"",
-						"visibility": "visible"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 778748497320321,
+							"parameters": {
+								"variable": "Health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 780694244822146,
+							"parameters": {
+								"layer": "\"GameOver\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 580162136244951,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 499781164870924
 				},
 				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 528035562713139,
-					"parameters": {
-						"time-scale": "0"
-					}
-				}
-			],
-			"sid": 970005250302115
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 324943137385539,
-					"parameters": {
-						"object": "Restart_GameOver"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 625306722196291,
+							"parameters": {
+								"object": "Restart_GameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 372760311904699,
+							"parameters": {
+								"layer": "\"GameOver\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 503026344027240
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 925604932846741,
+							"parameters": {
+								"layer": "\"GameOver\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 789494888943993,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 930924027790562
 				},
 				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 692062667892277,
-					"parameters": {
-						"layer": "\"GameOver\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 243828539519731,
+							"parameters": {
+								"object": "home_gameOver"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 324224396030331,
+							"parameters": {
+								"layer": "\"GameOver\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 986779544940379,
+							"parameters": {
+								"layout": "Main Menu"
+							}
+						}
+					],
+					"sid": 300888941515267
 				}
 			],
-			"actions": [
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 797627056019673
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 809368300884950,
-					"parameters": {
-						"time-scale": "1.0"
-					}
-				}
-			],
-			"sid": 919761631555801
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-touched-object",
-					"objectClass": "Touch",
-					"sid": 351706199385349,
-					"parameters": {
-						"object": "home_gameOver"
-					}
-				},
-				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 919979270624833,
-					"parameters": {
-						"layer": "\"GameOver\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 419707142853904,
-					"parameters": {
-						"layout": "Main Menu"
-					}
-				}
-			],
-			"sid": 135925859624561
+			"sid": 756663168721420
 		},
 		{
 			"eventType": "group",
@@ -1011,9 +1044,9 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 279244367540800,
+							"sid": 745149164259466,
 							"parameters": {
-								"variable": "Score",
+								"variable": "score2",
 								"comparison": 5,
 								"value": "0"
 							}
@@ -1037,9 +1070,9 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 429463081139051,
+							"sid": 221553436150869,
 							"parameters": {
-								"variable": "Score",
+								"variable": "score2",
 								"comparison": 5,
 								"value": "500"
 							}
@@ -1063,9 +1096,9 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 348464418869170,
+							"sid": 573907016066106,
 							"parameters": {
-								"variable": "Score",
+								"variable": "score2",
 								"comparison": 5,
 								"value": "800"
 							}
