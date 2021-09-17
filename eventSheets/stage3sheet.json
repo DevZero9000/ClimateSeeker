@@ -84,13 +84,71 @@
 						{
 							"id": "on-touched-object",
 							"objectClass": "Touch",
-							"sid": 263115601333676,
+							"sid": 704919773010436,
 							"parameters": {
-								"object": "w_Sprite40"
+								"object": "pins"
 							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "pins",
+							"sid": 798689355956904,
+							"parameters": {
+								"width": "24",
+								"height": "67.41"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 662042997349350,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "pins",
+							"sid": 645026244015317,
+							"parameters": {
+								"width": "1",
+								"height": "0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 105880966984046,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						}
+					],
+					"sid": 252977215045086
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 263115601333676,
+							"parameters": {
+								"object": "w_Pin1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 397070574195110,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
 						{
 							"callFunction": "correct1",
 							"sid": 519692766489471
@@ -103,7 +161,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 115789053981623,
 									"parameters": {
 										"comparison": 0,
@@ -122,7 +180,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 171938039207420
 								}
 							],
@@ -133,7 +191,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 245132981472330,
 									"parameters": {
 										"comparison": 0,
@@ -152,7 +210,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 777434990843332
 								}
 							],
@@ -163,7 +221,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 900858929139229,
 									"parameters": {
 										"comparison": 0,
@@ -182,7 +240,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 207125028633635
 								}
 							],
@@ -193,7 +251,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 765143621878128,
 									"parameters": {
 										"comparison": 0,
@@ -212,7 +270,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "w_Sprite40",
+									"objectClass": "w_Pin1",
 									"sid": 560423900825330
 								}
 							],
@@ -228,7 +286,7 @@
 							"objectClass": "Touch",
 							"sid": 176872618079282,
 							"parameters": {
-								"object": "w_Sprite46"
+								"object": "w_Pin23456"
 							}
 						}
 					],
@@ -239,7 +297,7 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "w_Sprite46",
+							"objectClass": "w_Pin23456",
 							"sid": 771322288006376
 						}
 					],
@@ -259,12 +317,21 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 393820721951629,
+					"parameters": {
+						"group-name": "\"awal\"",
+						"state": "deactivated"
+					}
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 159692692041697,
+					"sid": 371510913417754,
 					"parameters": {
 						"variable": "scorest3",
-						"value": "100"
+						"value": "200"
 					}
 				},
 				{
@@ -296,6 +363,24 @@
 				{
 					"callFunction": "updateviscorest3",
 					"sid": 152685593782743
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 384121205315237,
+					"parameters": {
+						"variable": "Pin1Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 684031227379072,
+					"parameters": {
+						"group-name": "\"awal\"",
+						"state": "activated"
+					}
 				}
 			],
 			"sid": 785043805268526
@@ -311,12 +396,29 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 995121676348205,
+					"parameters": {
+						"group-name": "\"awal\"",
+						"state": "deactivated"
+					}
+				},
+				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
 					"sid": 590836746532692,
 					"parameters": {
 						"variable": "scorest3",
 						"value": "100"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "corazon",
+					"sid": 736897702454983,
+					"parameters": {
+						"frame-number": "corazon.AnimationFrame+1"
 					}
 				},
 				{
@@ -350,11 +452,21 @@
 					"sid": 833405888846536
 				},
 				{
-					"id": "set-animation-frame",
-					"objectClass": "corazon",
-					"sid": 882394818639376,
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 160250466521882,
 					"parameters": {
-						"frame-number": "corazon.AnimationFrame+1"
+						"variable": "Health1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 123123814018796,
+					"parameters": {
+						"group-name": "\"awal\"",
+						"state": "activated"
 					}
 				}
 			],
@@ -442,6 +554,439 @@
 				}
 			],
 			"sid": 129918777710750
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 229107802525985,
+					"parameters": {
+						"variable": "Health1",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 839447114613096,
+					"parameters": {
+						"seconds": "0.5\n"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "score_GameOver",
+					"sid": 120082240151998,
+					"parameters": {
+						"text": "Score"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 788600858776248,
+					"parameters": {
+						"layer": "\"Game Over\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 960328114788368,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 574345345058830
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GamePause3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 960189544847117,
+							"parameters": {
+								"object": "pause_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "pause_button",
+							"sid": 920718123621780,
+							"parameters": {
+								"scale": "1.2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 146679648096362,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "pause_button",
+							"sid": 512368733880755,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 286618719658247,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 579073143061210,
+							"parameters": {
+								"layer": "\"Game Pause\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 126575476861223,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 293087968842589
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 742847783008834,
+							"parameters": {
+								"object": "resume_pause"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 426529660843525,
+							"parameters": {
+								"layer": "\"Game Pause\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 525952809139612,
+							"parameters": {
+								"layer": "\"Game Pause\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 638006124861169,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 937235054547287
+				}
+			],
+			"sid": 911314819632001
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameComplete2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 776425592012081,
+							"parameters": {
+								"object": "next_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 215095023756519,
+							"parameters": {
+								"layer": "\"Game Complete\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 117370100239621,
+							"parameters": {
+								"layout": "Level Selection"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 468161627025648,
+							"parameters": {
+								"layer": "\"Game Complete\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 225522612840948,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 523102047096867
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 538690086639566,
+							"parameters": {
+								"object": "back_complete"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 713236280542647,
+							"parameters": {
+								"layer": "\"Game Complete\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 431829543579680
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 283344834759783
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 806422688647239,
+							"parameters": {
+								"layer": "\"Game Complete\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 950137568570201,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 575510039784740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 421251854307560,
+							"parameters": {
+								"variable": "scorest3",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 442680898849197,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 157603556645332
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 278265636837081,
+							"parameters": {
+								"variable": "scorest3",
+								"comparison": 5,
+								"value": "500"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 111196811534389,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 971332230464166
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 305439994273405,
+							"parameters": {
+								"variable": "scorest3",
+								"comparison": 5,
+								"value": "800"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "completePopup",
+							"sid": 728948783355328,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 469841616829529
+				}
+			],
+			"sid": 574451061539833
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 111141479467661,
+					"parameters": {
+						"variable": "scorest3",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "txtScore",
+					"sid": 873597502575369,
+					"parameters": {
+						"text": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 578875474590037,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 391864049292332
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 426098930232394,
+					"parameters": {
+						"variable": "Pin1Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 757816443862968,
+					"parameters": {
+						"layer": "\"Game Complete\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtScore_complete",
+					"sid": 984621662980363,
+					"parameters": {
+						"text": "scorest3"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 658606139305226,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 511683729784581
 		}
 	],
 	"sid": 170566697777584

@@ -61,6 +61,24 @@
 					}
 				},
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 351962453780628,
+					"parameters": {
+						"layer": "\"popupbenar\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 274867632119287,
+					"parameters": {
+						"layer": "\"popupsalah\"",
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "reset-global-variables",
 					"objectClass": "System",
 					"sid": 989493091101391
@@ -733,6 +751,41 @@
 				}
 			],
 			"sid": 884718926757295
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 108960902260294,
+					"parameters": {
+						"variable": "score2",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 698386533013666,
+					"parameters": {
+						"variable": "score2",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "w_score",
+					"sid": 853198031106057,
+					"parameters": {
+						"text": "0"
+					}
+				}
+			],
+			"sid": 940470301678270
 		},
 		{
 			"eventType": "group",

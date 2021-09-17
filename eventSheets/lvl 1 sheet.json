@@ -44,9 +44,9 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 406172602456487,
+					"sid": 125949459228420,
 					"parameters": {
-						"layer": "7",
+						"layer": "\"Level Complete\"",
 						"visibility": "invisible"
 					}
 				},

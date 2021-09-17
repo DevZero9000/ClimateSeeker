@@ -80,8 +80,7 @@
 						{
 							"id": "reset-global-variables",
 							"objectClass": "System",
-							"sid": 474136201519254,
-							"breakpoint": true
+							"sid": 474136201519254
 						},
 						{
 							"id": "set-eventvar-value",
@@ -753,6 +752,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 948470506126892,
+					"parameters": {
+						"variable": "SCORE3",
+						"value": "0"
+					}
+				},
 				{
 					"id": "set-text",
 					"objectClass": "Score3",
