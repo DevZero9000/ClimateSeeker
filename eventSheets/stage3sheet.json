@@ -556,55 +556,86 @@
 			"sid": 129918777710750
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameOver3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 229107802525985,
-					"parameters": {
-						"variable": "Health1",
-						"comparison": 3,
-						"value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 726984531184054,
+							"parameters": {
+								"variable": "Health1",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "score_GameOver",
+							"sid": 770424411355070,
+							"parameters": {
+								"text": "Score"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 564892257751917,
+							"parameters": {
+								"layer": "\"Game Over\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 280194393122854,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 686212591239111
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 583142363873186,
+							"parameters": {
+								"object": "Restart_GameOver"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 388646840996324
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 760783201827169,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 847134300632301
 				}
 			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 839447114613096,
-					"parameters": {
-						"seconds": "0.5\n"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "score_GameOver",
-					"sid": 120082240151998,
-					"parameters": {
-						"text": "Score"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 788600858776248,
-					"parameters": {
-						"layer": "\"Game Over\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 960328114788368,
-					"parameters": {
-						"time-scale": "0"
-					}
-				}
-			],
-			"sid": 574345345058830
+			"sid": 265692596541839
 		},
 		{
 			"eventType": "group",
@@ -619,9 +650,9 @@
 						{
 							"id": "on-touched-object",
 							"objectClass": "Touch",
-							"sid": 960189544847117,
+							"sid": 368873624655902,
 							"parameters": {
-								"object": "pause_button"
+								"object": "Sprite82"
 							}
 						}
 					],
